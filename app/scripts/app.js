@@ -25,5 +25,9 @@ angular.module('abstackVarLib', [])
                 $scope.wordsList = data;
             });
 
+        $scope.setKeywords = function(tag){
+            $scope.keywords = tag;
+        }
+
 
     }]);
