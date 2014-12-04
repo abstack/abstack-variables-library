@@ -37,13 +37,22 @@ angular.module('abstackVarLib', ['zeroclipboard'])
         };
     })
     .filter('keywords', function(){
+        function compare(origin, target){
+            origin = origin.join('');
+            for(var i = 0;i<target.length;i++){
+                if(origin.indexOf(target[i]) != -1)
+                    return true;
+            }
+            return false;
+        }
+
         return function(input, type){
             if(!type)
                 return input;
 
             var temp = [];
             for(var i = 0;i<input.length;i++){
-                if(input[i].tags.join().indexOf(type) != -1)
+                if(compare(input[i].tags, type.split(' ')))
                     temp.push(input[i]);
             }
 
