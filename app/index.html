@@ -9,10 +9,10 @@
         <script src="bower_components/angular-zeroclipboard/src/angular-zeroclipboard.js"></script>
         <script src="scripts/app.js"></script>
     </head>
-    <body ng-app="abstackVarLib" ng-controller="mainCtrl">
+    <body ng-app="abstackVarLib" ng-controller="mainCtrl" backspace-focus="search">
         <header>
             Abstack Tech Variables Library
-            <input type="text" class="search-box" placeholder="Type some keywords..." ng-model="keywords">
+            <input type="text" id="search" class="search-box" placeholder="Type some keywords..." ng-model="keywords" ready-focus>
         </header>
         <ul class="word-list ng-hide" ng-show="wordsList">
             <li ng-repeat="word in wordsList | keywords: keywords">
@@ -21,7 +21,7 @@
                     <a target="_blank" ng-href="{{ word.url?word.url: 'http://www.dict.cn/' + word.word }}" ng-bind="word.word"></a>
                 </h3>
                 <span class="tag-box">
-                    <em ng-repeat="tag in word.tags track by $index" ng-bind="tag" ng-click="setKeywords(tag)"></em>
+                    <a href="javascript:;" ng-repeat="tag in word.tags track by $index" ng-bind="tag" ng-click="setKeywords(tag)"></a>
                 </span>
             </li>
         </ul>
