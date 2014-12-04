@@ -7,19 +7,19 @@
         <script src="bower_components/angularjs/angular.min.js"></script>
         <script src="scripts/app.js"></script>
     </head>
-    <body ng-app="abstackVarLib">
+    <body ng-app="abstackVarLib" ng-controller="mainCtrl">
         <header>
             Abstack Tech Variables Library
             <input type="text" class="search-box" placeholder="Type some keywords...">
         </header>
-        <ul class="word-list">
-            <li>
-                <h3><button class="btn-copy">COPY</button><a href="javascript:;">Settings</a></h3>
+        <ul class="word-list ng-hide" ng-show="wordsList">
+            <li ng-repeat="word in wordsList">
+                <h3>
+                    <button class="btn-copy">COPY</button>
+                    <a target="_blank" ng-href="{{ word.url?word.url: 'http://www.dict.cn/' + word.word }}" ng-bind="word.word"></a>
+                </h3>
                 <span class="tag-box">
-                    <em>设置</em>
-                    <em>设置</em>
-                    <em>设置</em>
-                    <em>设置</em>
+                    <em ng-repeat="tag in word.tags track by $index" ng-bind="tag"></em>
                 </span>
             </li>
         </ul>
