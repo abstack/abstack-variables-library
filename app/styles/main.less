@@ -1,0 +1,174 @@
+@main-color: #56caf5;
+@deep-main-color: #46add3;
+@placeholder-color: #3a91b1;
+
+
+body{
+    margin: 0;
+}
+header{
+    padding-top: 140px;
+    padding-bottom: 10px;
+    font-family: "Georgia", "Tahoma", "Arial";
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    background: url(../images/logo.png) center 30px no-repeat @main-color;
+    text-shadow: 2px 3px 5px @deep-main-color;
+}
+/* for retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2){
+    header{
+        background-image: url(../images/logo@2x.png);
+        background-size: 130px 80px;
+    }
+}
+.search-box{
+    display: block;
+    margin: 32px auto;
+    padding: 0 10px;
+    width: 400px;
+    height: 40px;
+    font-size: 20px;
+    color: #fff;
+    *line-height: 40px;
+    border: none;
+    background-color: @deep-main-color;
+    border-radius: 5px;
+    outline: none;
+    &::-webkit-input-placeholder{
+        color: @placeholder-color;
+    }
+    &::-moz-placeholder{
+        color: @placeholder-color;
+    }
+}
+
+.word-list{
+    @gap: 20px;
+    list-style: none;
+    padding: 10px 40px;
+    margin-left: -@gap;
+    li{
+        @height: 90px;
+        float: left;
+        margin-left: @gap;
+        margin-bottom: 14px;
+        width: 266px;
+        padding: 6px 12px;
+        height: @height;
+        border: 1px solid @main-color;
+        border-radius: 5px;
+        overflow: hidden;
+        &:hover{
+            border-color: @deep-main-color;
+        }
+        h3{
+            margin: -6px -12px 0;
+            padding-left: 10px;
+            font-family: "Georgia", "Tahoma", "Arial";
+            font-size: 18px;
+            letter-spacing: 2px;
+            line-height: 36px;
+            background-color: @main-color;
+            text-shadow: 0 1px 3px @placeholder-color;
+            a{
+                position: relative;
+                color: #fff;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+                &:hover:before{
+                    content: 'Click to go to dict.cn';
+                    position: absolute;
+                    z-index: 10;
+                    top: 24px;
+                    left: -5px;
+                    width: 140px;
+                    padding: 4px 10px;
+                    font-family: none;
+                    font-size: 13px;
+                    line-height: 20px;
+                    text-align: center;
+                    letter-spacing: 0;
+                    text-shadow: none;
+                    background-color: #000;
+                    opacity: 0.8;
+                    filter: alpha(opacity=80);
+                    border-radius: 5px;
+                }
+            }
+            .btn-copy{
+                float: right;
+                padding: 0 8px;
+                border: none;
+                line-height: 36px;
+                color: @placeholder-color;
+                text-shadow: 0 1px 0 #68e4ff;
+                background-color: #53c2eb;
+                border-left: 1px solid #49b3d9;
+                cursor: pointer;
+                outline: none;
+                &:hover{
+                    background-color: @main-color;
+                }
+            }
+        }
+        .tag-box{
+            display: inline-block;
+            margin-top: 10px;
+            height: @height - 40;
+            overflow: auto;
+            &:before{
+                content: 'Tags: ';
+                font-size: 14px;
+                margin-right: -2px;
+            }
+            em{
+                @bgcolor: #eee;
+                position: relative;
+                display: inline-block;
+                margin-left: 12px;
+                margin-bottom: 6px;
+                padding: 3px 6px;
+                font-size: 13px;
+                font-style: normal;
+                color: #333;
+                background-color: @bgcolor;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+                cursor: pointer;
+                &:hover{
+                    box-shadow: 0px 1px 3px #999;
+                }
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -20px;
+                    width: 0;
+                    height: 0;
+                    border: 10px solid transparent;
+                    border-right-color: @bgcolor;
+                }
+                &:after{
+                    @size: 4px;
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: -2px;
+                    margin-top: -@size/2;
+                    width: @size;
+                    height: @size;
+                    background-color: #fff;
+                    border-radius: @size;
+                    box-shadow: 0 0 1px #aaa;
+                }
+            }
+        }
+    }
+}
