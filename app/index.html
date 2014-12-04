@@ -10,10 +10,10 @@
     <body ng-app="abstackVarLib" ng-controller="mainCtrl">
         <header>
             Abstack Tech Variables Library
-            <input type="text" class="search-box" placeholder="Type some keywords...">
+            <input type="text" class="search-box" placeholder="Type some keywords..." ng-model="keywords">
         </header>
         <ul class="word-list ng-hide" ng-show="wordsList">
-            <li ng-repeat="word in wordsList">
+            <li ng-repeat="word in wordsList | keywords: keywords">
                 <h3>
                     <button class="btn-copy">COPY</button>
                     <a target="_blank" ng-href="{{ word.url?word.url: 'http://www.dict.cn/' + word.word }}" ng-bind="word.word"></a>

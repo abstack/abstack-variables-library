@@ -5,33 +5,23 @@
     "tags": ["设置", "设定", "偏好"]
 },
 {
-    "word": "settings",
-    "url": "http://www.dict.cn/settings",
-    "tags": ["设置", "设定", "偏好"]
+    "word": "feedback",
+    "tags": ["建议", "反馈", "投诉", "意见", "改进"]
 },
 {
-    "word": "settings",
-    "url": "http://www.dict.cn/settings",
-    "tags": ["设置", "设定", "偏好"]
+    "word": "project",
+    "tags": ["项目", "标", "工程"]
 },
 {
-    "word": "settings",
-    "url": "http://www.dict.cn/settings",
-    "tags": ["设置", "设定", "偏好"]
+    "word": "dashboard",
+    "tags": ["仪表盘", "概览", "主页", "监控"]
 },
 {
-    "word": "settings",
-    "url": "http://www.dict.cn/settings",
-    "tags": ["设置", "设定", "偏好"]
+    "word": "redirect",
+    "tags": ["跳转", "转到"]
 },
 {
-    "word": "settings",
-    "url": "http://www.dict.cn/settings",
-    "tags": ["设置", "设定", "偏好"]
-},
-{
-    "word": "settings",
-    "url": "http://www.dict.cn/settings",
-    "tags": ["设置", "设定", "偏好"]
+    "word": "following",
+    "tags": ["关注", "正在关注", "关心"]
 }
 ]
