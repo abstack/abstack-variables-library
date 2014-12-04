@@ -24,6 +24,7 @@
     "tests"
   ],
   "dependencies": {
-    "angularjs": "1.2.27"
+    "angularjs": "1.2.27",
+    "angular-zeroclipboard": "~0.3.2"
   }
 }

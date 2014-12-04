@@ -3,7 +3,13 @@
 *
 * Description: main
 */
-angular.module('abstackVarLib', [])
+angular.module('abstackVarLib', ['zeroclipboard'])
+    .config(['uiZeroclipConfigProvider', function(uiZeroclipConfigProvider) {
+        // config ZeroClipboard
+        uiZeroclipConfigProvider.setZcConf({
+          swfPath: '../bower_components/zeroclipboard/dist/ZeroClipboard.swf'
+        });
+    }])
     .filter('keywords', function(){
         return function(input, type){
             if(!type)
@@ -18,7 +24,7 @@ angular.module('abstackVarLib', [])
             return temp;
         }
     })
-    .controller('mainCtrl', ['$http', '$scope', function($http, $scope){
+    .controller('mainCtrl', ['$timeout', '$http', '$scope', function($timeout, $http, $scope){
 
         $http.get('/json/words.json')
             .success(function(data){
@@ -29,5 +35,10 @@ angular.module('abstackVarLib', [])
             $scope.keywords = tag;
         }
 
-
+        $scope.copiedWord = function(word){
+            word.copyTip = 'COPIED !';
+            $timeout(function(){
+                delete word.copyTip;
+            }, 1500);
+        }
     }]);
