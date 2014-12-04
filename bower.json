@@ -1,0 +1,30 @@
+{
+  "name": "Abstack-variables-library",
+  "version": "0.0.1",
+  "homepage": "https://github.com/PeachScript/Abstack-variables-library",
+  "authors": [
+    "Peach <scdzwyxst@gmail.com>"
+  ],
+  "description": "Variables library for Abstack Tech",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "Variables",
+    "Library",
+    "Abstack",
+    "Tech"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "1.2.27",
+    "angular-zeroclipboard": "~0.3.2"
+  }
+}
