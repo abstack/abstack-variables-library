@@ -7,7 +7,7 @@ angular.module('abstackVarLib', ['zeroclipboard'])
     .config(['uiZeroclipConfigProvider', function(uiZeroclipConfigProvider) {
         // config ZeroClipboard
         uiZeroclipConfigProvider.setZcConf({
-          swfPath: '/scripts/libs/ZeroClipboard.swf'
+          swfPath: 'scripts/libs/ZeroClipboard.swf'
         });
     }])
     .directive('readyFocus', ['$document', function($document){
