@@ -7,7 +7,7 @@ angular.module('abstackVarLib', ['zeroclipboard'])
     .config(['uiZeroclipConfigProvider', function(uiZeroclipConfigProvider) {
         // config ZeroClipboard
         uiZeroclipConfigProvider.setZcConf({
-          swfPath: '../bower_components/zeroclipboard/dist/ZeroClipboard.swf'
+          swfPath: '/scripts/libs/ZeroClipboard.swf'
         });
     }])
     .directive('readyFocus', ['$document', function($document){
@@ -61,7 +61,7 @@ angular.module('abstackVarLib', ['zeroclipboard'])
     })
     .controller('mainCtrl', ['$timeout', '$http', '$scope', function($timeout, $http, $scope){
 
-        $http.get('/json/words.json')
+        $http.get('http://rawgit.com/PeachScript/Abstack-variables-library/master/app/json/words.json')
             .success(function(data){
                 $scope.wordsList = data;
             });
