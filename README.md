@@ -14,7 +14,7 @@ Run
 2. Install bower dependencies in `www` directory :
 
   ````
-  $ gulp install
+  $ bower install
   ````
 3. Run server through gulp :
 
