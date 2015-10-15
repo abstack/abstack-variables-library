@@ -61,7 +61,7 @@ angular.module('abstackVarLib', ['zeroclipboard'])
     })
     .controller('mainCtrl', ['$timeout', '$http', '$scope', function($timeout, $http, $scope){
 
-        $http.get('http://rawgit.com/PeachScript/Abstack-variables-library/master/app/json/words.json')
+        $http.get('http://rawgit.com/PeachScript/Abstack-variables-library/develop/app/json/words.json')
             .success(function(data){
                 $scope.wordsList = data;
             });
