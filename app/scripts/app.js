@@ -40,7 +40,7 @@ angular.module('abstackVarLib', ['zeroclipboard'])
         function compare(origin, target){
             origin = origin.join('');
             for(var i = 0;i<target.length;i++){
-                if(origin.indexOf(target[i]) != -1)
+                if(origin.indexOf(target[i]) != -1 && i == target.length - 1)
                     return true;
             }
             return false;
@@ -51,9 +51,10 @@ angular.module('abstackVarLib', ['zeroclipboard'])
                 return input;
 
             var temp = [];
-            for(var i = 0;i<input.length;i++){
-                if(compare(input[i].tags, type.split(' ')))
+            for(var i = 0;i<input.length;i++) {
+                if(compare(input[i].tags, type.split(' ')) || input[i].word.indexOf(type) != -1) {
                     temp.push(input[i]);
+                }
             }
 
             return temp;
