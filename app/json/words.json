@@ -1,27 +1,75 @@
 [
-{
-    "word": "settings",
-    "url": "http://www.dict.cn/settings",
-    "tags": ["设置", "设定", "偏好"]
-},
-{
-    "word": "feedback",
-    "tags": ["建议", "反馈", "投诉", "意见", "改进"]
-},
-{
-    "word": "project",
-    "tags": ["项目", "标", "工程"]
-},
-{
-    "word": "dashboard",
-    "tags": ["仪表盘", "概览", "主页", "监控"]
-},
-{
-    "word": "redirect",
-    "tags": ["跳转", "转到"]
-},
-{
-    "word": "following",
-    "tags": ["关注", "正在关注", "关心"]
-}
+    {
+        "word": "settings",
+        "url": "http://www.dict.cn/settings",
+        "tags": ["设置", "设定", "偏好"]
+    },
+    {
+        "word": "feedback",
+        "tags": ["建议", "反馈", "投诉", "意见", "改进"]
+    },
+    {
+        "word": "project",
+        "tags": ["项目", "标", "工程"]
+    },
+    {
+        "word": "dashboard",
+        "tags": ["仪表盘", "概览", "主页", "监控"]
+    },
+    {
+        "word": "redirect",
+        "tags": ["跳转", "转到"]
+    },
+    {
+        "word": "following",
+        "tags": ["关注", "正在关注", "关心"]
+    },
+    {
+        "word": "gender",
+        "tags": ["性别", "身份"]
+    },
+    {
+        "word": "phone",
+        "tags": ["手机号码"]
+    },
+    {
+        "word": "avatar",
+        "tags": ["头像"]
+    },
+    {
+        "word": "password",
+        "tags": ["密码"]
+    },
+    {
+        "word": "points",
+        "tags": ["积分"]
+    },
+    {
+        "word": "score",
+        "tags": ["得分", "分值"]
+    },
+    {
+        "word": "diliveryman",
+        "tags": ["配送员"]
+    },
+    {
+        "word": "is_show",
+        "tags": ["是否可见", "是否封号"]
+    },
+    {
+        "word": "username",
+        "tags": ["用户名", "收货人"]
+    },
+    {
+        "word": "nickname",
+        "tags": ["昵称"]
+    },
+    {
+        "word": "is_default",
+        "tags": ["是否默认"]
+    },
+    {
+        "word": "detail_address",
+        "tags": ["详细地址"]
+    }
 ]
