@@ -1,29 +1,28 @@
-Abstack-variables-library
-=========================
+# Abstack-variables-library
 
-Variables library for Abstack Tech
+Variable library for Abstack Tech. [Here](https://peachscript.github.io/Abstack-variables-library/) is the online demo.
 
-Run
-===
+## Setup
 
-1. Install node dependencies in `www` directory : 
+1. Install development dependencies: 
 
-  ````
-  $ npm install
-  ````
-2. Install bower dependencies in `www` directory :
+````bash
+$ npm install
+````
 
-  ````
-  $ bower install
-  ````
-3. Run server through gulp :
+2. Install front-end dependiencies:
 
-  ````
-  $ gulp
-  ````
+````bash
+$ bower install
+````
 
-MIT license
-===========
+3. Run server:
+
+````bash
+$ npm start
+````
+
+## MIT license
 
 The MIT License (MIT)
 
