@@ -1,6 +1,6 @@
 # Abstack-variables-library
 
-Variable library for Abstack Tech. [Here](https://peachscript.github.io/Abstack-variables-library/) is the online demo.
+Variable library for Abstack Tech. [Here](https://abstack.github.io/abstack-variables-library/) is the online demo.
 
 ## Setup
 
